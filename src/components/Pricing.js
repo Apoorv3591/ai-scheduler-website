@@ -1,6 +1,12 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 export default function Pricing() {
+
+  const navigate = useNavigate();
+
+  const handleStartClick = () => {
+    navigate('/login');
+  };
   return (
     <section style={{
       backgroundColor: '#ffffff',
@@ -37,7 +43,7 @@ export default function Pricing() {
               borderRadius: '6px',
               cursor: 'pointer'
             }}
-            onClick={() => alert("Free plan activated")}
+            onClick={handleStartClick}
           >
             Start for Free
           </button>
