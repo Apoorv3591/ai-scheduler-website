@@ -1,0 +1,58 @@
+/* src/styles/Navbar.css */
+
+.navbar {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  .navbar-left .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-right {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  
+  .navbar-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+  }
+  
+  .navbar-right a:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-btn {
+    padding: 6px 14px;
+    background-color: white;
+    color: #2575fc;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px #999;
+  }
+  
+  .nav-btn:hover {
+    background-color: #e8e8e8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px #999;
+  }
+  
+  .nav-btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
+  
