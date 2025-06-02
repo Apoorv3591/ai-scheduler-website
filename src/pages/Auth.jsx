@@ -12,7 +12,17 @@ const Auth = () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
-      localStorage.setItem('uid', user.uid);
+      const accessToken = user.stsTokenManager.accessToken;
+      const uid = user.uid;
+
+      localStorage.setItem('uid', uid);
+
+      await fetch('https://scheduler-ai.onrender.com/api/store-creds', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uid, access_token: accessToken }),
+      });
+
       navigate('/dashboard');
     } catch (error) {
       console.error("Google Sign-In error:", error.message);
